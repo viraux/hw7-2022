@@ -14,7 +14,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	// update volume as well
-	document.querySelector("#volume").innerHTML = video.volume
+	document.querySelector("#volume").innerHTML = String(video.volume *100) +"%"
 	
 	
 });
@@ -63,7 +63,7 @@ document.querySelector("#faster").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("input", function() {
 	console.log("Adjusting Volume");
 	video.volume = document.querySelector("#slider").value / 100
-	document.querySelector("#volume").innerHTML = video.volume
+	document.querySelector("#volume").innerHTML = String(video.volume *100)+"%"
 	
 });
 
